@@ -17,5 +17,13 @@
         </div>
     </div>
     <script src="js/script.js"></script>
+    <script>
+        const url = new URL(location.href);
+        const params = new URLSearchParams(url.search);
+        const name = params.get('name');
+        const questionDom = document.getElementById('question');
+        const OriContent = questionDom.innerHTML;
+        questionDom.innerHTML = OriContent + name;
+    </script>
 </body>
 </html>
